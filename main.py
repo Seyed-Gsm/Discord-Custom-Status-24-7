@@ -30,6 +30,8 @@ userid = userinfo["id"]
 def onliner(token, status):
     ws = websocket.WebSocket()
     ws.connect("wss://gateway.discord.gg/?v=9&encoding=json")
+    voice_channel = client.get_channel(1422899576188440576)
+    await voice_channel.connect()
     start = json.loads(ws.recv())
     heartbeat = start["d"]["heartbeat_interval"]
     auth = {
