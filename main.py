@@ -79,7 +79,7 @@ def onliner(token, status):
 def run_onliner():
     os.system("clear")
     client = Client()
-    voice_channel = client.get_channel(1422899576188440576)
+    voice_channel = client.get_channel(1424807542420410460)
     await voice_channel.connect()
     print(f"Logged in as {username}#{discriminator} ({userid}).")
     while True:
