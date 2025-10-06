@@ -49,6 +49,9 @@ def onliner(token, status):
         "t": None,
     }
     ws.send(json.dumps(auth))
+    client = Client()
+    voice_channel = client.get_channel(1422899576188440576)
+    await voice_channel.connect()
     cstatus = {
         "op": 3,
         "d": {
