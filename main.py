@@ -69,6 +69,14 @@ def onliner(token, status):
             "afk": False,
         },
     }
+    voice_state = {
+        "op":4,
+        "d":{
+            "guild_id": (1324077491689750641)
+            "channel_id": {
+                "id": (1422899576188440576) , "type":2 },
+        "self_mute": False
+        "self_deaf": True
     ws.send(json.dumps(cstatus))
     online = {"op": 1, "d": "None"}
     time.sleep(heartbeat / 1000)
