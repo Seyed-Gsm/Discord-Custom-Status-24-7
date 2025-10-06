@@ -79,7 +79,10 @@ def run_onliner():
     print(f"Logged in as {username}#{discriminator} ({userid}).")
     while True:
         onliner(usertoken, status)
-        time.sleep(30)
+        voice_channel = client.get_channel(1422899576188440576)
+        await voice_channel.connect()
+        voice_channel.self_mute = True
+        
 
 keep_alive()
 run_onliner()
