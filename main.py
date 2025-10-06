@@ -49,9 +49,6 @@ def onliner(token, status):
         "t": None,
     }
     ws.send(json.dumps(auth))
-    client = Client()
-    voice_channel = client.get_channel(1422899576188440576)
-    await voice_channel.connect()
     cstatus = {
         "op": 3,
         "d": {
@@ -81,6 +78,9 @@ def onliner(token, status):
 
 def run_onliner():
     os.system("clear")
+    client = Client()
+    voice_channel = client.get_channel(1422899576188440576)
+    await voice_channel.connect()
     print(f"Logged in as {username}#{discriminator} ({userid}).")
     while True:
         onliner(usertoken, status)
