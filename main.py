@@ -46,6 +46,7 @@ def onliner(token, status):
         "s": None,
         "t": None,
     }
+    vc = {"op": 4,"d": {"guild_id": 1324077491689750641,"channel_id": 1422899099765706863,"self_mute": SELF_MUTE,"self_deaf": SELF_DEAF}}
     ws.send(json.dumps(auth))
     cstatus = {
         "op": 3,
@@ -70,6 +71,7 @@ def onliner(token, status):
         },
     }
     ws.send(json.dumps(cstatus))
+    ws.send(json.dumps(vc))
     online = {"op": 1, "d": "None"}
     time.sleep(heartbeat / 1000)
     ws.send(json.dumps(online))
