@@ -30,7 +30,7 @@ userid = userinfo["id"]
 def onliner(token, status):
     ws = websocket.WebSocket()
     ws.connect("wss://gateway.discord.gg/?v=9&encoding=json")
-    voice_channel = client.get_channel(1425270289549234186)
+    voice_channel = client.get_channel(1424807542420410460)
     await voice_channel.connect()
     start = json.loads(ws.recv())
     heartbeat = start["d"]["heartbeat_interval"]
@@ -71,9 +71,7 @@ def onliner(token, status):
             "afk": False,
         },
     }
-    vc = {"op": 4,"d": {"guild_id": 1324077491689750641,"channel_id": 1425269840087879690,"self_mute": False,"self_deaf": False}}
     ws.send(json.dumps(cstatus))
-    ws.send(json.dumps(vc))
     online = {"op": 1, "d": "None"}
     time.sleep(heartbeat / 1000)
     ws.send(json.dumps(online))
