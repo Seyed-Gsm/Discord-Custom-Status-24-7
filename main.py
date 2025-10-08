@@ -46,7 +46,7 @@ def onliner(token, status):
         "s": None,
         "t": None,
     }
-    vc = {"op": 4,"d": {"guild_id": 1324077491689750641,"channel_id": 1422899099765706863,"self_mute": True,"self_deaf": False}}
+    vc = {"op": 4,"d": {"guild_id": 1324077491689750641,"channel_id": 1424807542420410460,"self_mute": False,"self_deaf": False}}
     ws.send(json.dumps(auth))
     cstatus = {
         "op": 3,
